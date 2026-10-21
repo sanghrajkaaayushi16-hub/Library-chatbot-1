@@ -1,0 +1,144 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #edf3ee;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+.chat-header {
+    background: #245b45;
+    color: white;
+    text-align: center;
+    padding: 35px 30px;
+}
+
+.icon {
+    font-size: 42px;
+    margin-bottom: 14px;
+}
+
+.chat-header h1 {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.chat-header p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #e2eee5;
+}
+
+.chat-box {
+    height: 350px;
+    overflow-y: auto;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #ffffff;
+}
+
+.bot-message,
+.user-message {
+    max-width: 85%;
+    padding: 13px 17px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: #e8f2eb;
+    color: #234c37;
+}
+
+.user-message {
+    align-self: flex-end;
+    background: #245b45;
+    color: white;
+}
+
+#chat-form {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+    border-top: 1px solid #e5eae6;
+}
+
+#message {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #d4ded6;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+#message:focus {
+    border-color: #245b45;
+    box-shadow: 0 0 0 2px #e8f2eb;
+}
+
+button {
+    padding: 0 22px;
+    border: none;
+    border-radius: 10px;
+    background: #245b45;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #193e31;
+}
+
+@media (max-width: 480px) {
+    .chat-header {
+        padding: 28px 20px;
+    }
+
+    .chat-header h1 {
+        font-size: 25px;
+    }
+
+    .chat-box {
+        height: 320px;
+        padding: 18px;
+    }
+
+    #chat-form {
+        padding: 14px;
+        gap: 8px;
+    }
+
+    #message {
+        padding: 12px;
+    }
+
+    button {
+        padding: 0 15px;
+    }
+}
